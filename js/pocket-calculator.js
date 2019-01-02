@@ -1,4 +1,4 @@
-function button() {
+function button(num) {
   document.calculator.display.value = document.calculator.display.value + num
 }
 
