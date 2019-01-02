@@ -1,3 +1,4 @@
+
 let output = "";
 
 function button0(){
@@ -81,5 +82,11 @@ function buttonMultiply(){
 function buttonDivide(){
   let p = document.getElementById("output");
   output = output + "/";
+  p.innerHTML = output;
+}
+
+function buttonDecimal(){
+  let p = document.getElementById("output");
+  output = output+".";
   p.innerHTML = output;
 }
