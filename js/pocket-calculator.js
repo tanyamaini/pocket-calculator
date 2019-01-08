@@ -1,6 +1,19 @@
-function button(num) {
-  document.calculator.display.value = document.calculator.display.value + num
+function displayValue(x) {
+	document.getElementById('dislayScreen').value += x;
 }
+
+function clearDisplay(y) {
+	document.getElementById('displayScreen').value = y;
+}
+
+function result() {
+	var result = eval(document.getElementById('displayScreen').value);
+	document.getElementById('displayScreen').value = result;
+}
+
+// function button(num) {
+//   document.calculator.display.value = document.calculator.display.value + num
+// }
 
 // let output = "";
 //
