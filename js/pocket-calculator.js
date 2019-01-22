@@ -36,7 +36,6 @@ function displayValue(valuesInputted) { //VALUESINPUTTED IS THE VALUE OF THE LAS
     thereIsDecimal = true;
   }
   if(thereIsDecimal && valuesInputted == "."){
-    alert("hi");
      return;
   }
 
