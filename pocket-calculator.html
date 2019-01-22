@@ -8,49 +8,53 @@
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/pocket-calculator.js"></script>
-    <script type="text/javascript" src="js/pocket-calculator.js"></script>
   </head>
 <body>
   <div>
   <form name="displayScreen">
-    <input class="displayScreen" name="displayScreen" disabled>
+    <input placeholder=0 class="displayScreen" id="displayScreen" disabled
+    <script type="text/javascript">/>
+            <!-- document.getElementById("resultValue").onkeypress = function(event){
+                if (event.keyCode == 13 || event.which == 13){
+                  onclick="resultValue"> -->
   </form>
+<p>
 <table cellpadding="2">
   <tr>
-    <td><button type="button" id="button" value="" onclick="clearDisplay(document.getElementById('clear').value)">Clear</button></td>
-    <td><input type="button" id="button" value="-/+" onclick="displayValue(document.getElementById('plusMinus').value)"></td>
-    <td><input type="button" id="button" value="%" onclick="displayValue(document.getElementById('percent').value)"></td>
-    <td>	<input type="button" id="button" value="/" onclick="displayValue(document.getElementById('devide').value)"></td>
+    <td><button type="button" id="clear" value="" onclick="clearDisplay(document.getElementById('clear').value)">AC</button></td>
+    <td><button type="button" id="plusMinus" value="-/+" onclick="negative(document.getElementById('plusMinus').value)">-/+</button></td>
+    <td><button type="button" id="percent" value="%" onclick="percentage(document.getElementById('percent').value)">%</button></td>
+    <td><button type="button" id="divide" value="/" onclick="displayValue(document.getElementById('divide').value)">÷</button></td>
   </tr>
   <tr>
-    <td> <input type="button" id="button" value= "7" onclick="displayValue(document.getElementById('seven').value)"></td>
-    <td> <input type="button" id="button" value = "8" onclick="displayValue(document.getElementById('eight').value)"></td>
-    <td><input type="button" id="button" value = "9" onclick="displayValue(document.getElementById('nine').value)"></td>
-    <td><input type="button" id="button" value = "x" onclick="displayValue(document.getElementById('multiply').value)"></td>
+    <td><button type="button" id="seven" value= "7" onclick="displayValue(document.getElementById('seven').value)">7</button></td>
+    <td> <button type="button" id="eight" value = "8" onclick="displayValue(document.getElementById('eight').value)">8</button></td>
+    <td><button type="button" id="nine" value = "9" onclick="displayValue(document.getElementById('nine').value)">9</button></td>
+    <td><button type="button" id="multiply" value = "*" onclick="displayValue(document.getElementById('multiply').value)">x</button></td>
   </tr>
   <tr>
-    <td><input type="button" id="button" value="4" onclick="displayValue(document.getElementById('four').value)"></td>
-    <td><input type="button" id="button" value="5" onclick="displayValue(document.getElementById('five').value)"></td>
-    <td><input type="button" id="button" value="6" onclick="displayValue(document.getElementById('six').value)"></td>
-    <td><input type="button" id="button" value="-" onclick="displayValue(document.getElementById('minus').value)"></td>
+    <td><button type="button" id="four" value="4" onclick="displayValue(document.getElementById('four').value)">4</button></td>
+    <td><button type="button" id="five" value="5" onclick="displayValue(document.getElementById('five').value)">5</button></td>
+    <td><button type="button" id="six" value="6" onclick="displayValue(document.getElementById('six').value)">6</button></td>
+    <td><button type="button" id="subtract" value="-" onclick="displayValue(document.getElementById('subtract').value)">-</button></td>
   </tr>
   <tr>
-    <td><input type="button" id="button" value="1" onclick="displayValue(document.getElementById('one').value)"></td>
-    <td><input type="button" id="button" value="2" onclick="displayValue(document.getElementById('two').value)"></td>
-    <td><input type="button" id="button" value="3" onclick="displayValue(document.getElementById('three').value)"></td>
-    <td><input type="button" id="button" value="+" onclick="displayValue(document.getElementById('plus').value)"></td>
+    <td><button type="button" id="one" value="1" onclick="displayValue(document.getElementById('one').value)">1</button></td>
+    <td><button type="button" id="two" value="2" onclick="displayValue(document.getElementById('two').value)">2</button></td>
+    <td><button type="button" id="three" value="3" onclick="displayValue(document.getElementById('three').value)">3</button></td>
+    <td><button type="button" id="add" value="+" onclick="displayValue(document.getElementById('add').value)">+</button></td>
   </tr>
   <tr>
-    <td><input type="button" id="button" value="0" onclick="displayValue(document.getElementById('zero').value)"></td>
-    <td><input type="button" id="button" value="." onclick="displayValue(document.getElementById('decimal').value)"></td>
-    <td><input type="button" id="button" value="=" onclick="result()"></td>
+    <td colspan="2"><button  type="button" id="zero" class="black" value="0" onclick="displayValue(document.getElementById('zero').value)">0</button></td>
+    <td><button  type="button" id="decimal" class="black" value="." onclick="displayValue(document.getElementById('decimal').value)">.</button></td>
+    <td><button type="button" id="equals" class="orange" value="=" onclick="resultValue()">=</button></td>
 </table>
 
 
 
 <!-- //WORKS
-<div class="mycalc">
-  <form name="displayScreen">
+<div class="mycalc"> -->
+  <!-- <form name="displayScreen">
     <input disabled>
   </form>
 	<form name="calculator" id="calculator">
@@ -68,16 +72,16 @@
 			<input type="button" id="button" value="-" onclick="displayValue(document.getElementById('minus').value)">
 		</div>
 		<div>
-			<input type="button" id="button" value="7" onclick="takeValue(document.getElementById('seven').value)">
-			<input type="button" id="button" value="8" onclick="takeValue(document.getElementById('eight').value)">
-			<input type="button" id="button" value="9" onclick="takeValue(document.getElementById('nine').value)">
-			<input type="button" id="button" value="*" onclick="takeValue(document.getElementById('by').value)">
+			<input type="button" id="button" value="7" onclick="displayValue(document.getElementById('seven').value)">
+			<input type="button" id="button" value="8" onclick="displayValue(document.getElementById('eight').value)">
+			<input type="button" id="button" value="9" onclick="displayValue(document.getElementById('nine').value)">
+			<input type="button" id="button" value="*" onclick="displayValue(document.getElementById('by').value)">
 	    </div>
 	    <div>
-			<input type="button" id="button" value="0" onclick="takeValue(document.getElementById('zero').value)">
-			<input type="button" id="button" value="." onclick="takeValue(document.getElementById('decimal').value)">
-			<input type="button" id="button" value="/" onclick="takeValue(document.getElementById('devide').value)">
-			<input type="button" id="button" value="%" onclick="takeValue(document.getElementById('percent').value)">
+			<input type="button" id="button" value="0" onclick="displayValue(document.getElementById('zero').value)">
+			<input type="button" id="button" value="." onclick="displayValue(document.getElementById('decimal').value)">
+			<input type="button" id="button" value="/" onclick="displayValue(document.getElementById('devide').value)">
+			<input type="button" id="button" value="%" onclick="displayValue(document.getElementById('percent').value)">
 	    </div>
 	    <div class="results">
 			<input type="button" id="button" value="=" onclick="calculateResult()">
