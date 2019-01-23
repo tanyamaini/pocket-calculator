@@ -19,8 +19,6 @@ let originalValue = "";
 let thereIsDecimal = false;
 let zeroPressedAfterDecimal = false;
 let commasArray=[]; //Turning commas string into an array to fix thereIsDecimal
-// let firstNumberDone= false;
-// //NOPE let valuesInputted = "";
 function displayValue(valuesInputted) { //VALUESINPUTTED IS THE VALUE OF THE LAST CLICKED BUTTON
   if(calculationDone==true){
     clearDisplay();
@@ -92,64 +90,56 @@ function displayValue(valuesInputted) { //VALUESINPUTTED IS THE VALUE OF THE LAS
     document.getElementById("zero").disabled = false;
    }
 
-    if(numbers <= 999999999){
-      if(calculationDone== true){
-        clear("");
-        calculationDone = false;
-      }
+  if(numbers <= 999999999){
+    if(calculationDone== true){
+      clear("");
+      calculationDone = false;
+  }
 
-      if(firstNumberDone==false){
-        equationArray.push(valuesInputted);
-        if(valuesInputted == "."){
-          equationArray.push("0");
-          commas = commas + "0";
-        }
-      }
+  if(firstNumberDone==false){
+    equationArray.push(valuesInputted);
+    if(valuesInputted == "."){
+      equationArray.push("0");
+      commas = commas + "0";
+    }
+  }
 
-      // alert(equationArray + " len "+ arrayLength);
-      // alert(equationArray[arrayLength-2] + equationArray[arrayLength-1] == "0");
-      // alert(equationArray[arrayLength-3]);
+  //show a decimal with implied zero
+  let arrayLength = equationArray.length;
+  if((equationArray[equationArray.length-2] == "0") && (equationArray[equationArray.length-3]==".") && (valuesInputted=="0")){
+    zeroPressedAfterDecimal = true;
+    equationArray.splice(arrayLength-2, 1);
+    commas = commas.replace(".0",'.');
+  }
 
-      //show a decimal with implied zero
-      let arrayLength = equationArray.length;
-      if((equationArray[equationArray.length-2] == "0") && (equationArray[equationArray.length-3]==".") && (valuesInputted=="0")){
-        zeroPressedAfterDecimal = true;
-        equationArray.splice(arrayLength-2, 1);
-        commas = commas.replace(".0",'.');
-      }
+  if((zeroPressedAfterDecimal == false) && (equationArray[arrayLength-2] == "0") && (equationArray[arrayLength-3]==".") && (valuesInputted=="0" || valuesInputted=="1" || valuesInputted=="2" || valuesInputted=="3" || valuesInputted=="4" || valuesInputted=="5" || valuesInputted=="6" || valuesInputted=="7" || valuesInputted=="8" || valuesInputted=="9")){
+    equationArray.splice(arrayLength-2, 1);
+    commas = commas.replace(".0",'.');
+  }
 
-      if((zeroPressedAfterDecimal == false) && (equationArray[arrayLength-2] == "0") && (equationArray[arrayLength-3]==".") && (valuesInputted=="0" || valuesInputted=="1" || valuesInputted=="2" || valuesInputted=="3" || valuesInputted=="4" || valuesInputted=="5" || valuesInputted=="6" || valuesInputted=="7" || valuesInputted=="8" || valuesInputted=="9")){
-        equationArray.splice(arrayLength-2, 1);
-        commas = commas.replace(".0",'.');
-      }
+  if((valuesInputted=="*" || valuesInputted=="+" || valuesInputted=="/" || valuesInputted=="-") && (equationArray[arrayLength-2] == "*" || equationArray[arrayLength-2] == "+" || equationArray[arrayLength-2]=="-" || equationArray[arrayLength-2]=="/")){ //equationArray[0] == valuesInputted
+    equationArray.splice(arrayLength-2, 1);
+  }
 
+  equationString=equationArray.join("");
 
-      if((valuesInputted=="*" || valuesInputted=="+" || valuesInputted=="/" || valuesInputted=="-") && (equationArray[arrayLength-2] == "*" || equationArray[arrayLength-2] == "+" || equationArray[arrayLength-2]=="-" || equationArray[arrayLength-2]=="/")){ //equationArray[0] == valuesInputted
-        equationArray.splice(arrayLength-2, 1);
-      }
-
-      equationString=equationArray.join("");
-
-      if(valuesInputted=="+" || valuesInputted== "-" || valuesInputted== "*" || valuesInputted== "/"){
-        clear("");
-        numbers="";
-        commas = "";
-        numbersSplit = "";
-      }
-      else {
-        numbersSplit = "";
-        numbersSplit = commas.toString().split(".");
-        numbersSplit[0] = numbersSplit[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        // alert(numbersSplit);
-        numbersSplit= numbersSplit.join(".");
-        document.getElementById('displayScreen').value = numbersSplit;
-
-      }
-
-      // if(equationArray[arrayLength-1]=="0" && equationArray[arrayLength-2] =="."){
-      //   equationArray.splice(arrayLength-2, 1);
-      // }
-   }
+  if(valuesInputted=="+" || valuesInputted== "-" || valuesInputted== "*" || valuesInputted== "/"){
+    clear("");
+    numbers="";
+    commas = "";
+    numbersSplit = "";
+  }
+  else {
+    numbersSplit = "";
+    numbersSplit = commas.toString().split(".");
+    numbersSplit[0] = numbersSplit[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    numbersSplit= numbersSplit.join(".");
+    document.getElementById('displayScreen').value = numbersSplit;
+  }
+  // if(equationArray[arrayLength-1]=="0" && equationArray[arrayLength-2] =="."){
+  //   equationArray.splice(arrayLength-2, 1);
+  // }
+  }
 }
 
 function negative(){
@@ -161,49 +151,45 @@ function negative(){
   equationArray.unshift("-");
   equationString=equationArray.join("");
 
-
   if(document.getElementById('displayScreen').value.startsWith("-") == false){
     originalValue = document.getElementById('displayScreen').value;
     document.getElementById('displayScreen').value = "-" + document.getElementById('displayScreen').value;
   }
   else {
-      document.getElementById('displayScreen').value= originalValue;
+    document.getElementById('displayScreen').value= originalValue;
   }
 }
 
- function percentage(){
-   document.getElementById('displayScreen').value = document.getElementById('displayScreen').value / 100;
-   equationArray.push("/","1", "0", "0");
-   equationString=equationArray.join("");
- }
+
+function percentage(){
+  document.getElementById('displayScreen').value = document.getElementById('displayScreen').value / 100;
+  equationArray.push("/","1", "0", "0");
+  equationString=equationArray.join("");
+}
+
 
 function clear(empty){
   document.getElementById('displayScreen').value = empty;
 }
 
+
 function clearDisplay(empty) {
 	document.getElementById('displayScreen').value = empty;
-  // if(document.getElementById('clear').value=="clear"){
-    // alert(equationString);
     equationString="";
     numbersSplit="";
     commas="";
     numbers="";
     equationArray=[];
     originalValue="";
-  // }
 }
 
+
 function resultValue() {
-	// var result = eval(document.getElementById('displayScreen').value);
   if (equationString == ""){
     return;
   }
   let arrayLength = equationArray.length;
   error=false;
-  // if(equationString == "1/0"){
-  //   error= true;
-  // }
   if(equationArray[arrayLength-2]=="/" && equationArray[arrayLength-1]=="0"){
     error=true;
   }
@@ -234,7 +220,6 @@ function resultValue() {
       document.getElementById('displayScreen').value = numbersSplit;
     }
     else{
-  // }
     	document.getElementById('displayScreen').value = split;
   }
 }

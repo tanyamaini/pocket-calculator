@@ -17,7 +17,6 @@ table{
   background-color: black;
   color: white;
   border: black;
-  /* width: 300px; */
 }
 
 #one{
@@ -65,146 +64,146 @@ table{
 }
 
 #five{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-color: white;
-background-color: #464646;
-border: #464646;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: #464646;
+  border: #464646;
 }
 
 #six{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-color: white;
-background-color: #464646;
-border: #464646;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: #464646;
+  border: #464646;
 }
 
 #seven{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-color: white;
-background-color: #464646;
-border: #464646;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: #464646;
+  border: #464646;
 }
 
 #eight{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-color: white;
-background-color: #464646;
-border: #464646;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: #464646;
+  border: #464646;
 }
 
 #nine{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-color: white;
-background-color: #464646;
-border: #464646;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: #464646;
+  border: #464646;
 }
 
 #zero{
-width: 210px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-color: white;
-background-color: #464646;
-border: #464646;
+  width: 210px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: #464646;
+  border: #464646;
 }
 
 #clear{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-background-color:#B5B7B7;
-color: black;
-border:#B5B7B7;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  background-color:#B5B7B7;
+  color: black;
+  border:#B5B7B7;
 }
 
 #divide{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-background-color: #FC9900;
-color: white;
-border: #FC9900;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #FC9900;
+  color: white;
+  border: #FC9900;
 }
 
 #multiply{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-background-color: #FC9900;
-color: white;
-border: #FC9900;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #FC9900;
+  color: white;
+  border: #FC9900;
 }
 
 #add{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-background-color: #FC9900;
-color: white;
-border: #FC9900;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #FC9900;
+  color: white;
+  border: #FC9900;
 }
 
 #subtract{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-background-color: #FC9900;
-color: white;
-border: #FC9900;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #FC9900;
+  color: white;
+  border: #FC9900;
 }
 
 #decimal{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-color: white;
-background-color: #464646;
-border: #464646;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: #464646;
+  border: #464646;
 }
 
 #percent{
-width: 105px;
-height: 105px;
-font-size: 50px;
-padding: 10px;
-border-radius: 100px;
-background-color:#B5B7B7;
-color: black;
-border:#B5B7B7;
+  width: 105px;
+  height: 105px;
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  background-color:#B5B7B7;
+  color: black;
+  border:#B5B7B7;
 }
 
 #plusMinus{
@@ -227,5 +226,4 @@ border:#B5B7B7;
   background-color: #FC9900;
   color: white;
   border: #FC9900;
-
 }
